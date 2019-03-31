@@ -1,0 +1,8 @@
+Flag is cs628a{3e7d5a3ac65aca67c2a4224d73ba768e}. It has buffer overflow exploit. It first 
+checks given string with "y". Hence I gave input as "y"+chr(0x0), then followed by 
+overflowing to write address of some stack where I have overflowed to write address of 
+_Z15execute_commandPKc function. Thus, from _Z5greetP7Greeter function's call eax 
+instruction, my desired function gets called which gives me flag by executing cat flag.txt( 
+since suid bit is set.). Since the address space was randomised, I wrote bash.sh script to 
+try every possible value of last byte of stack address. Upify.py is python script to do 
+attack with given stack address offset.

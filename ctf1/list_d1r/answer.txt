@@ -1,0 +1,6 @@
+The flag is cs628a{b48cadf65479fe62f1187cc7eb76ab7d}. By inspecting list_d1r inside gdb, I 
+made out that it is checking the FLAG env variable, and checking for the input given with 
+some string by making password for value of FLAG env. I set the FLAG env to 1 and saw the 
+password it made, and provided that. Then it was executing ls -l with setuid bit set. I 
+changed the env PATH to my directory, and made a fake ls binary which did /bin/cat flag.txt. 
+This gave me flag. The ls.c file and corresponding ls fake binary is inside folder. 

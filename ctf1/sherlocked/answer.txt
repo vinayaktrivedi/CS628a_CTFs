@@ -1,0 +1,4 @@
+The flag is cs628a{a917e0757018f1740185368a7705262e}. Using deduction by code given in 
+Iamsherlocked.py, I could make out that by sliding 8 numbers over the contents of flag.enc, 
+xoring with each hex byte(treating pair of two characters as a hexademical number), I will 
+get flag. To obtain these 8 numbers, I used the fact that flag is of form cs628a{secret}. 

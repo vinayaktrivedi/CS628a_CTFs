@@ -1,0 +1,5 @@
+Flag is cs628a{7e8a07d6a022a8774f4d61a11a492297}. Observing objject dump of otp_gen, I got 
+that it is doing md5 hash of current unix time concatenated with username. To get old 
+otp(which was generated and saved in pass.db), I need to know the unix time when it was 
+generated, which I got through modified time of pass.db (stat -c %Y pass.db), and then 
+created hash with my username. Using otp, I got flag.

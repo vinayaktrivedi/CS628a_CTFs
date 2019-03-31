@@ -1,0 +1,7 @@
+Flag is cs628a{adb9f6df2c6683ae245ee45a8277a55b}. It has buffer overflow and Integer 
+overflow attack. Dobby compares the length of secret to 0x129, and to overflow I had to give 
+longer than this input. So I gave the length to be 0xffff which makes comparison true(It 
+sign extends the length, so 16th bit should be 1, then it compares 0xffffffff with 0x129). 
+Then I overflowed it to write return address to get_flag, and the password asked can be seen 
+from gdb(which is crucio). I wrote the script script.py to give the desired input of all 
+questions of dobby, which gave flag. 

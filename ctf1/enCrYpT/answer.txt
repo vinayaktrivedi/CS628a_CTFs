@@ -1,0 +1,9 @@
+Flag is cs628a{5b9a33405fd31443e321d167bf616c01}. It has Format String Attack. The encrypted 
+text is printed directly without %s, which gets exploited. Encrypted text was stored 160 
+bytes away from rsp of printf. I needed the encrypted(format) string as adress+39*(%x)+(%n) 
+where address was one to be used in comparison. This wrote 160 in that address and getFlag 
+was called since comparison failed. To get this as encrypted string, I generated the 
+pattern followed in encrypt function to encrypt text by encrypt.py. Using this pattern, I 
+got corresponding reverse string and did attack. Address space was randomised, hence 
+combination of bash.sh and script.py was used to attack which tried every offset possible for last byte 
+of required address. 

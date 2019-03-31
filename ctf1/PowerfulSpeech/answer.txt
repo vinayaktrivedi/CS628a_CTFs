@@ -1,0 +1,5 @@
+Flag is cs628a{6fa4c01cbed637ad9103472a52cce1a9}
+Speech.enc contains encrypted speech with substitution cipher. After a bit of guessing the 
+offsets of few alphabets by trying to create sane words, I got the offsets, and decrypted 
+the speech using the script decrypt.py. The password was uhetonlris through which I got 
+flag.

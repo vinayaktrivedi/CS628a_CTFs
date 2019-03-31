@@ -1,0 +1,5 @@
+Flag is cs628a{ff016c6bd760e18ef9e759340f94e110}. It has buffer overflow exploit. I 
+overflowed with yes+chr(0x0)+string so that coparison with yes is true. In the overflow I 
+had written address of data segment of just 4 bytes above it where I overflowed to write 
+address of function _ZN5Flage8get_flagEPKc. Then it asked for input ffile, for which I gave 
+flag.txt. This gave me the flag. Script.py is the file I used for attack.

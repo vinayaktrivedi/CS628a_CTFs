@@ -1,0 +1,6 @@
+Flag is cs628a{a6ed9527684761a1a6066da68ec7645d}. It has canary check. Canary is made by 
+calling rand function with parameter as unix time. To replicate this, I created random.c 
+file to get unix time, and replicate rand function of n0_libc since it had very few assembly 
+instructions. Then I overflowed buffer, writing canary at desired position, and return 
+address of functions one_two, buckle, my_shoe and get_flag. I ensured length of input is 353 
+which was required in a comparison. Script.py is the file used for attacking.  

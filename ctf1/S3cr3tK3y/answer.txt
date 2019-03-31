@@ -1,0 +1,6 @@
+Flag is cs628a{93dd5d3d227b071d920b782db4894cd8}. It has bufer overflow exploit. Before 
+returning to main, it checks the first 4 bytes of strings present as addresses ebp-16 and ebp+8. So, I 
+overfowed the buffer in a way that both contain the same stack address(decided by me). I 
+overflowed the return address of check_flag function to getFlag function, and overflowed the address ebp+12 to write address of data segment 
+address containing the string "flag.txt". This gave me the flag. File script.py was used to 
+do the attack.

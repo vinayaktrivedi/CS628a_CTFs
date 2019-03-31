@@ -1,0 +1,3 @@
+Flag is cs628a{wElc0m3_1o_c0mpu13er_s3curi1y} 
+The header off image given was wrong. First two bytes were wrong. It should be 0x8950. Then 
+to detect the flag which was a watermark in image, I used stegsolve tool, and got the flag.
